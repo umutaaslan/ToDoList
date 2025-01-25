@@ -10,12 +10,15 @@
   }
   html, body {
     height: 100%;
+    width: 100%;
     padding: 0;
-    font-family: "Playfair display";
+    font-family: "Roboto Mono";
+    font-size: small;
   }
   body {
     line-height: calc(1em + 0.5rem);
     -webkit-font-smoothing: antialiased;
+    background-color: #FCE7C8;
   }
   img, picture, video, canvas, svg {
     display: block;
@@ -43,3 +46,122 @@
     font-family: inherit;
     font-size: 100%;
   }
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+.all-flex-wrapper  {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main.grid-wrapper {
+  height: 80%;
+  width: 60%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 4fr;
+  border: 4px solid #F0A04B;
+  border-radius: 8px;
+}
+
+
+nav.navbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 1rem;
+  border-bottom: 3px solid #F0A04B;
+}
+
+.appendButton {
+  margin-left: auto;
+  border: none;
+  background-color: #F0A04B;
+  color: white;
+  border-radius: 20px;
+  font-size: xx-large;
+  padding: 1rem;
+}
+
+.navigator {
+  display: flex;
+  padding: 1rem 3rem;
+  gap: 3rem;
+  font-size: large;
+  cursor: default;
+}
+
+#static {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3fr 1fr;
+}
+
+#dynamic {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(10, 8vh);
+  grid-auto-rows: 8vh;
+  overflow: scroll;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  gap: 1rem;
+  color: white;
+}
+
+.task > * {
+  border: 1.5px solid #B1C29E;
+  background-color: #973131;
+  padding: .2rem .6rem;
+}
+
+.task > div, .task > button {
+  border-radius: 40px;
+}
+
+.title-importance {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+
+.editButton {
+  margin-left: auto;
+}
+
+
+.project-box {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.addProject {
+  border: none;
+  background-color: #F0A04B;
+  color: white;
+  border-radius: 8px;
+}
+.editButton, .deleteButton {
+  width: 4rem;
+}
+
+.editButton:active, .deleteButton:active, .appendButton:active, .addProject:active {
+  scale: .8;
+  box-shadow: inset;
+}
+
+.task input[type = "checkbox"] {
+  scale: 1.5;
+}
+
+.task:hover {
+  cursor: default;
+}

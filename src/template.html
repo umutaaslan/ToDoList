@@ -3,9 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>To Do</title>
 </head>
 <body>
-    
+    <div class="all-flex-wrapper">
+        <main class="grid-wrapper">
+            <div id="static">
+                <nav class="navbar">
+                    <div class="project-box">
+                        <select name="" id="">
+                            <option value="">Project</option>
+                        </select>
+                        <button class="addProject">add project</button>
+                    </div>
+                    <div class="title-importance">
+                        <input type="text" name="" id="" placeholder="title">
+                        <select name="" id="">
+                            <option value="">high</option>
+                            <option value="">medium</option>
+                            <option value="">low</option>
+                        </select>
+                    </div>
+                    <textarea name="" id="" cols="20" rows="3" placeholder="description" style="resize: none;"></textarea>
+                    <input type="date" name="" id="">
+                    <button class="appendButton">+</button>
+                </nav>
+                <div class="navigator">
+                    <p>title</p>
+                    <p>importance</p>
+                    <p>description</p>
+                    <p>due date</p>
+                </div>
+            </div>
+            <div id="dynamic">
+                <div class="task">
+                    <input type="checkbox" name="" id="">
+                    <div>title</div>
+                    <div>importance</div>
+                    <div>description</div>
+                    <div>due date</div>
+                    <button class="editButton"><img src="asset/edit.svg" alt=""></button>
+                    <button class="deleteButton"><img src="asset/delete.svg" alt=""></button>
+                </div>
+        </main>
+    </div>
 </body>
 </html>
