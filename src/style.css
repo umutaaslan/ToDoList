@@ -133,7 +133,12 @@ nav.navbar {
 
 
 .editButton {
+  display: flex;
   margin-left: auto;
+  font-size: smaller;
+  color: white;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -164,4 +169,43 @@ nav.navbar {
 
 .task:hover {
   cursor: default;
+}
+
+.desc {
+  max-width: 20rem;
+  overflow: scroll;
+}
+
+.add-project-modal {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.add-project-modal > .modal-content {
+  height: 40%;
+  width: 40%;
+  background-color: #B1C29E;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  color: rgb(65, 65, 255);
+  font-size: x-large;
+  font-weight: 700;
+  border-radius: 8px;
+}
+
+.addProjectSubmit {
+  padding: .8rem;
+  color: white;
+  background-color: black;
 }
