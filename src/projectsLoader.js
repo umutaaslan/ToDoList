@@ -6,9 +6,9 @@ export function projectsLoader(){
     }
     Object.keys(projects).forEach(item => {
         const newOption = document.createElement("option");
-        newOption.setAttribute("value", projectTitle);
-        newOption.innerText = projectTitle;
+        newOption.setAttribute("value", item);
+        newOption.innerText = item;
         DOM.projectSelect.appendChild(newOption);
-        DOM.projectSelect.value = newOption;
+        DOM.projectSelect.value = item;
     })
 }

@@ -14,7 +14,7 @@ tasksLoader()
 
 buttonFunctionality.addProject("project1");
 tasksLoader(Object.keys(projects).shift());
-// projectsLoader();
+projectsLoader();
 
 // buttonFunctionality.createTask("a", "low", "b", "2025");
 // buttonFunctionality.createTask("afsa", "lowfsa", "bfa", "2025");

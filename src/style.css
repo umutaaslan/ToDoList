@@ -158,7 +158,7 @@ nav.navbar {
   width: 4rem;
 }
 
-.editButton:active, .deleteButton:active, .appendButton:active, .addProject:active {
+.editButton:active, .deleteButton:active, .appendButton:active, .addProject:active, .deleteProject:active {
   scale: .8;
   box-shadow: inset;
 }
@@ -176,7 +176,7 @@ nav.navbar {
   overflow: scroll;
 }
 
-.add-project-modal {
+.add-project-modal, .delete-project-modal {
   height: 100%;
   width: 100%;
   display: flex;
@@ -189,7 +189,7 @@ nav.navbar {
   background-color: rgba(0,0,0,0.4);
 }
 
-.add-project-modal > .modal-content {
+.add-project-modal > .modal-content, .delete-project-modal > .modal-content {
   height: 40%;
   width: 40%;
   background-color: #B1C29E;
@@ -208,4 +208,19 @@ nav.navbar {
   padding: .8rem;
   color: white;
   background-color: black;
+}
+
+.deleteProjectSubmit {
+  padding: .8rem;
+  color: white;
+  background-color: red;
+}
+
+.deleteProject {
+  font-size: small;
+  border: none;
+  background-color: red;
+  color: #c9fcff;
+  border-radius: 8px;
+  font-weight: 800;
 }

@@ -3,6 +3,7 @@ import { projects } from ".";
 import { newTaskElement } from "./createNewTaskElement";
 import { updateLocalStorage, getLatestLocalStorage } from "./localStorage";
 import { tasksLoader } from "./tasksLoader";
+import { projectsLoader } from "./projectsLoader";
 
 export const buttonFunctionality = (function(){
     let currentProject = "project1";
@@ -11,6 +12,7 @@ export const buttonFunctionality = (function(){
             projects[projectTitle] = [];
             currentProject = projectTitle;
             tasksLoader(currentProject);
+            projectsLoader();
             updateLocalStorage();
         }
     }
@@ -27,6 +29,7 @@ export const buttonFunctionality = (function(){
         delete projects[project];
         currentProject = Object.keys(projects).shift();
         tasksLoader(currentProject);
+        projectsLoader();
         updateLocalStorage();
     }
 

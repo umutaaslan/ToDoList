@@ -2,6 +2,8 @@ import { DOM } from "./DOM";
 import * as urlEditSvg from "./asset/edit.svg";
 import * as urlDeleteSvg from "./asset/delete.svg";
 import { projects } from ".";
+import { createReadableTimeDistance } from "./createReadableTimeDistance";
+
 export function newTaskElement(title, importance, description, dueDate, taskID){
                 const div = document.createElement("div");
                 const checkbox = document.createElement("input");
@@ -28,8 +30,8 @@ export function newTaskElement(title, importance, description, dueDate, taskID){
                 titleDiv.innerText = title;
                 importanceDiv.innerText = importance;
                 descriptionDiv.innerText = description;
-                dueDateDiv.innerText = dueDate;
                 editButtonNew.setAttribute("editOrSubmit", "edit");
+                dueDateDiv.innerText = createReadableTimeDistance(dueDate);
 
                 div.appendChild(checkbox);
                 div.appendChild(titleDiv);

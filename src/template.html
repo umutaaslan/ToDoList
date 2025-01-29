@@ -15,6 +15,7 @@
                             <option value="project1">Project</option>
                         </select>
                         <button class="addProject">add project</button>
+                        <button class="deleteProject">delete project</button>
                     </div>
                     <div class="title-importance">
                         <input type="text" name="title" id="title" placeholder="title">
@@ -52,6 +53,13 @@
             <label for="addProjectInput">Project Name: </label>
             <input type="text" name="addProjectInput" id="addProjectInput">
             <button class="addProjectSubmit">Add Project</button>
+        </div>
+    </div>
+    <div class="delete-project-modal" style="display: none;">
+        <div class="modal-content">
+            <label for="addProjectInput">Project Name: (Be careful!)</label>
+            <input type="text" name="deleteProjectInput" id="deleteProjectInput">
+            <button class="deleteProjectSubmit">Delete Project</button>
         </div>
     </div>
 </body>

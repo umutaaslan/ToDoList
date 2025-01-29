@@ -2,6 +2,8 @@ import { buttonFunctionality } from "./buttonFunctionality";
 import { DOM } from "./DOM";
 import { resetValues } from "./resetValues";
 import { dynamicEdit } from "./dynamicEdit";
+import { projects } from ".";
+import { projectsLoader } from "./projectsLoader";
 
 export function addEventListeners(){
     DOM.appendButton.addEventListener("click", e => {
@@ -69,7 +71,25 @@ export function addEventListeners(){
         
     })
 
-    DOM.projectSelect
+    DOM.projectSelect.addEventListener("change", e => {
+        buttonFunctionality.switchProject(DOM.projectSelect.value);
+    })
+
+    document.addEventListener("click", e => {
+        if(e.target == DOM.deleteProjectModal){
+            DOM.deleteProjectModal.style.display = "none";
+        }
+    })
+
+    DOM.deleteProjectButton.addEventListener("click", e => {
+        DOM.deleteProjectModal.style.display = "flex";
+    })
+    
+    DOM.deleteProjectSubmit.addEventListener("click", e => {
+        buttonFunctionality.deleteProject(DOM.deleteProjectInput.value);
+        projectsLoader();
+        DOM.deleteProjectModal.style.display = "none";
+    })
 }
 
 
